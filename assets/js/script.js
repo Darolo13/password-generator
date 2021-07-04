@@ -63,7 +63,7 @@ function generatePassword() {
     allChars += specialChars;
   }
   
-  // for loop that will add random 
+  // for loop that will add random characters to each character variable
   for (i = password.length; i < passwordLength; i++) {
     password += randomChar(allChars)
   }
