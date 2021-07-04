@@ -43,5 +43,12 @@ if (lowercaseOption) {
   allChars += lowercaseChars;
 }
 
+// confirm uppercase "yes or no"
+var uppercaseOption = confirm("Would you like to include uppercase characters?");
+if (uppercaseOption) {
+  password += randomChar(uppercaseChars)
+  allChars += uppercaseChars;
+}
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
