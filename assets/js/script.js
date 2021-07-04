@@ -50,5 +50,13 @@ if (uppercaseOption) {
   allChars += uppercaseChars;
 }
 
+ // confirm numerical "yes or no"
+ var numericalOption = confirm("Would you like to include numerical characters?");
+ if (numericalOption) {
+   password += randomChar(numericalChars)
+   allChars += numericalChars;
+ }
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
