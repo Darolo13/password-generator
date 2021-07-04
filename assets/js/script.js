@@ -25,10 +25,22 @@ function generatePassword() {
 
 passwordLength = parseInt(passwordLength);
 
- // makes user input a length between 8 and 128 
+ // makes user input a length between 8 and 128 characters
 if (passwordLength < 8 || passwordLength > 128) {
   alert("Password must have more than 8 and less than 128 characters!");
   return generatePassword(); 
+}
+
+// random function with A javascript string method that allows user to select a character within the string
+function randomChar (charString) {
+  return charString[Math.floor(Math.random() * charString.length)];
+}
+
+// confirm lowercase "yes or no"
+var lowercaseOption = confirm("Would you like to include lowercase characters?");
+if (lowercaseOption) {
+  password += randomChar(lowercaseChars)
+  allChars += lowercaseChars;
 }
 
 // Add event listener to generate button
