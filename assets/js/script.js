@@ -36,25 +36,32 @@ function randomChar (charString) {
   return charString[Math.floor(Math.random() * charString.length)];
 }
 
-// confirm lowercase "yes or no"
+// confirm lowercase characters "yes or no"
 var lowercaseOption = confirm("Would you like to include lowercase characters?");
 if (lowercaseOption) {
   password += randomChar(lowercaseChars)
   allChars += lowercaseChars;
 }
 
-// confirm uppercase "yes or no"
+// confirm uppercase characters "yes or no"
 var uppercaseOption = confirm("Would you like to include uppercase characters?");
 if (uppercaseOption) {
   password += randomChar(uppercaseChars)
   allChars += uppercaseChars;
 }
 
- // confirm numerical "yes or no"
+ // confirm numerical characters "yes or no"
  var numericalOption = confirm("Would you like to include numerical characters?");
  if (numericalOption) {
    password += randomChar(numericalChars)
    allChars += numericalChars;
+ }
+
+ // confirm special characters "yes or no"
+ var specialOption = confirm("Would you like to include special characters?");
+ if (specialOption) {
+   password += randomChar(specialChars)
+   allChars += specialChars;
  }
 
 
